@@ -1,0 +1,658 @@
+/*Début Général */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;   
+    list-style: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    height: 20vh;
+    width: 100vw;
+    background: var(--background);
+    background-size: cover;
+}
+
+/*Fin Général */
+
+
+
+/* Début Barre de navigation version PC */
+
+.navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: var(--ecriture);
+    font-size: 30px;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.navbar .nav-links ul {
+    display: flex;
+    border-radius: 15px;
+    border-color: var(--ecriture);
+    padding: 2px;
+    
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;  
+}
+
+.navbar .nav-links ul li.active a {
+    color: #857b7bb2;
+    font-weight: 1000;
+}
+
+.navbar .menu-hamburger {
+    position: absolute;
+    display: none;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+}
+/* Fin Barre de navigation version PC */
+
+
+
+/*Début Barre de navigation téléphone */
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+        
+
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 50px;
+        left: 30px;
+    }
+    
+    .navbar .menu-hamburger {
+        display : block;
+        z-index: 3;
+    }
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(27, 23, 23, 0.329);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        z-index: 2;
+
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+        
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+    .nav-links ul {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+    
+}
+
+/* Fin Barre de navigation téléphone */
+
+
+
+/* Début Changement de Thème */
+
+.changeTheme {
+    position: absolute;
+    display : flex;
+    justify-content: right;
+    bottom: 10px;
+    right: 30px;
+    height: 45px;
+}
+.changeTheme img {
+    bottom: 10px;
+    border-radius: 15px;
+    z-index: 4;
+}
+
+:root {
+    --ecriture: #262626; /* Couleur de texte clair */
+    --background: #f1f1f1; /* Couleur de fond clair */
+    --ecriture2: #494949; /* Couleur de texte secondaire clair */
+}
+
+[data-theme="dark"] {
+    --ecriture: #f1f1f1; /* Couleur de texte sombre */
+    --background: #262626; /* Couleur de fond sombre */
+    --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
+}
+
+body {
+    background-color: var(--background);
+    color: var(--ecriture);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar, .profil, .contenu, footer {
+    color: var(--ecriture2);
+}
+
+.changeTheme img {
+    cursor: pointer;
+}
+
+
+/* Fin du Changement de Thème */
+
+
+/* Début Position du changement de Thème */
+
+.changeTheme {
+    position: fixed; /* Fixe le bouton à une position précise */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px; /* Distance du bas de la fenêtre */
+    right: 20px; /* Distance du côté droit */
+    width: 50px; /* Taille carrée pour mieux gérer l'icône */
+    height: 50px;
+    border-radius: 50%; /* Donne une forme circulaire au bouton */
+    background-color: var(--ecriture1); /* Fond en fonction du thème */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Une légère ombre */
+    cursor: pointer;
+    z-index: 100; /* S'assurer qu'il est visible devant tout le reste */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.changeTheme img {
+    max-width: 70%; /* Ajuste la taille de l'image à l'intérieur du bouton */
+    max-height: 70%;
+}
+
+.changeTheme:hover {
+    transform: scale(1.1); /* Agrandit légèrement au survol */
+    background-color: var(--background); /* Change la couleur pour indiquer l'interaction */
+}
+
+/* Fin Position du changement de Thème */
+
+/* Début Contenu d'acceuil */
+
+.contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenu p1 {
+    color: var(--ecriture);
+    font-size: 3em;
+}
+
+.contenu p2 {
+    color: var(--ecriture2);
+    font-size: 1.8em;
+    right: 20px;
+    
+}
+
+
+.profil {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cadre p2 img {
+    height: 70px;
+    margin-top: 10px;
+}
+
+.cadre {
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    place-content: center; 
+    margin: auto;
+    display: flex;
+}
+
+.cadre {
+    --color :hsla(0, 0%, 36%, 0.575);
+    display: inline-block;
+    cursor:pointer;
+    text-decoration: none;
+    border: 3px solid var(--color);
+    color: rgb(0, 0, 0);
+    padding: .5em 1em;
+    border-radius: .25em;
+    z-index: 1;
+
+    position: relative;
+    isolation: isolate;
+}
+
+
+.cadre::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--color);
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 450ms;
+}
+
+
+.cadre:hover::after,
+.cadre:focus-visible::after {
+    transform-origin: left;
+    scale: 1 1;
+}
+
+.profil p1 {
+    color: var(--ecriture);
+    display: flex;
+
+}
+
+.profil p2 {
+    color: var(--ecriture2);
+    font-size: 30px;
+}
+
+.profil p2 a {
+    color: var(--ecriture2);
+    text-decoration: underline; 
+}
+
+/* Fin contenu acceuil */
+
+/* Début contenu Tableau */ 
+
+.tab a{
+    color: var(--ecriture);
+}
+
+.tab img {
+    width: 30px;
+}
+
+/* Fin contenu Tableau */
+
+/* Début Version téléphone du tableau */
+
+@media (max-width: 768px) {
+    /* Adaptation du tableau */
+    table {
+        font-size: 0.8em; /* Réduction de la taille de la police */
+        width: 100%; /* S'assurer que le tableau prend tout l'espace disponible */
+    }
+
+    th, td {
+        padding: 8px; /* Ajustement des espacements */
+        display: block; /* Affichage en bloc pour une lisibilité sur petits écrans */
+        text-align: left; /* Alignement du texte */
+    }
+
+    tr {
+        display: block; /* Afficher les lignes en bloc */
+        margin-bottom: 10px; /* Espacement entre les lignes */
+    }
+
+    td a img {
+        width: 30px; /* Redimensionnement des images */
+        height: auto;
+    }
+}
+
+/* Fin Version téléphone du tableau */
+
+/* Début contenu Projets */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--ecriture);
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.card img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+    color : var(--ecriture);
+    padding: 0.8em;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 36%, 0.575);
+    background: transparent;
+}
+
+.btn:hover {
+    background-color: hsla(0, 0%, 36%, 0.575);
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.card-container{
+    display: flex;
+    padding: 1rem;
+}
+
+.card{
+    
+    border-radius: 1rem;
+    background-color: rgba(18,23,42 / 1);
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card-body{
+    padding: 1rem;
+    background-color: var(--background);
+}
+
+.card-title {
+    color: var(--ecriture);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card-text {
+    color: var(--ecriture);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+/*Début Version téléphone Projets */
+
+@media (min-width: 40rem){
+    .card-container{
+        width: 50%;
+    }
+}
+
+@media (min-width : 56rem){
+    .card-container{
+        width: 33.3333%;
+    }
+}
+
+
+/*Fin Version téléphone Projets */
+
+
+/* Fin contenu Projets */
+
+/* Début contenu cv version téléphone */
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5em; /* Réduire la taille de la police */
+        margin-bottom: 10px;
+    }
+
+    /* Section profil */
+    .profil {
+        display: flex;
+        flex-direction: column; /* Affichage en colonne */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profil .cadre {
+        width: 90%; /* Prend presque toute la largeur */
+        padding: 10px;
+        border: 1px solid #ddd; /* Bordure pour délimiter */
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .profil img {
+        width: 50px; /* Réduction de la taille de l'image */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .profil a {
+        font-size: 1em;
+        color: #007BFF; /* Lien en bleu pour plus de visibilité */
+        text-decoration: none;
+    }
+
+    .profil a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Fin contenu cv version téléphone */
+
+/* Début contenu contact */
+
+.profil {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 2px;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cadre p2 img {
+    height: 40px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.cadre {
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    place-content: center; 
+    margin: auto;
+    display: flex;
+}
+
+.cadre {
+    --color: hsla(0, 0%, 36%, 0.575);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid var(--color);
+    color: rgb(0, 0, 0);
+    padding: .5em 1em;
+    border-radius: .25em;
+    z-index: 1;
+    position: relative;
+    isolation: isolate;
+}
+
+.cadre::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--color);
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 450ms;
+}
+
+.cadre:hover::after,
+.cadre:focus-visible::after {
+    transform-origin: left;
+    scale: 1 1;
+}
+
+.profil p1 {
+    color: var(--ecriture);
+    display: flex;
+}
+
+.profil p2 {
+    color: var(--ecriture2);
+    font-size: 30px;
+}
+
+.profil p2 a {
+    color: var(--ecriture2);
+    text-decoration: underline;
+}
+
+
+/* Début contenu contact version téléphone */
+@media (max-width: 768px) {
+    .profil .cadre {
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        font-size: 1em; /* Taille du texte plus petite pour s'adapter */
+    }
+
+    .profil p1 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .profil p2 {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments */
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column; /* Aligner image et texte en colonne */
+        align-items: center; /* Centrer le contenu */
+        margin-bottom: 15px;
+        font-size: 1em;
+    }
+
+    .contact-item img {
+        width: 50px; /* Redimensionner l'image */
+        height: auto;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    .contact-item span {
+        color: var(--ecriture2); /* Couleur du texte */
+        font-size: 1.1em;
+        text-align: center;
+    }
+}
+/* Fin contenu contact version téléphone */
+
+
+/* Début Droit d'auteur */
+
+footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+    left: 20px;
+    color: var(--ecriture);
+    z-index: 4;
+}
+
+.droit h4 {
+    bottom: 10px;
+
+}
+
+/*Fin droit d'auteur */
