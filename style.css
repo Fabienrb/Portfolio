@@ -365,7 +365,9 @@ body {
     font-weight: 400;
 }
 
-
+.card-btn a {
+    color: var(--ecriture);
+}
 
 .container {
     max-width: 1200px;
@@ -668,8 +670,7 @@ table {
         background: hsla(0, 0%, 36%, 0.575);
     }
 
-
-
+/* Fin contenu Grille */
 
 /* Début Droit d'auteur */
 
