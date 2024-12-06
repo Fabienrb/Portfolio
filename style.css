@@ -682,6 +682,19 @@ table {
     text-align: center;
 }
 
+/* Fin projet snake */
+
+/* Début projet Portfolio */
+
+.projetportfolio p1 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fin projet Portfolio */
 
 /* Début Droit d'auteur */
 
