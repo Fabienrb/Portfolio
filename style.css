@@ -672,6 +672,17 @@ table {
 
 /* Fin contenu Grille */
 
+/* Début projet snake */
+
+.projetsnake p1 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
 /* Début Droit d'auteur */
 
 footer {
