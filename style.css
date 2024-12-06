@@ -637,6 +637,39 @@ h1 {
 }
 /* Fin contenu contact version téléphone */
 
+/* Début contenu Grille */
+
+table {
+            border-collapse: collapse;
+            border: 10px;
+            table-layout: auto;
+            width: 100%;
+        }
+    th, td {
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: left;
+        
+    }
+
+    td a {
+        max-width: 20px;
+        min-width: 20px;
+
+    }
+
+    th a {
+        max-width: 30px;
+       
+    }
+
+
+    tr:nth-of-type(even){
+        background: hsla(0, 0%, 36%, 0.575);
+    }
+
+
+
 
 /* Début Droit d'auteur */
 

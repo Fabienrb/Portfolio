@@ -119,45 +119,18 @@
             </li>
         </ul>
         
-        <!--Droits d'auteurs -->
+    <!-- Début Droits d'auteurs -->
         
         <h5>© 2024. Tous droits réservés.</h5>
     </div>
 
+    <!-- Fin Droits d'auteurs -->
 
-    <script>
-        // Script Menu Hamburger
-        const menuHamburger = document.querySelector(".menu-hamburger");
-        const navLinks = document.querySelector(".nav-links");
+    <!-- Début Script JS -->
+    
+    <script src="script.js"></script>
 
-        menuHamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('mobile-menu');
-        });
-
-        // Gestion du thème sombre/clair
-const rootElement = document.documentElement;
-
-// Charger le thème sauvegardé
-const savedTheme = localStorage.getItem('theme') || 'light';
-rootElement.setAttribute('data-theme', savedTheme);
-
-// Basculer entre les thèmes lors d'un clic sur le bouton
-document.addEventListener('DOMContentLoaded', () => {
-    const switchThemeBtn = document.querySelector('.changeTheme');
-
-    if (switchThemeBtn) {
-        switchThemeBtn.addEventListener('click', () => {
-            const currentTheme = rootElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            rootElement.setAttribute('data-theme', newTheme);
-
-            // Sauvegarder la préférence dans localStorage
-            localStorage.setItem('theme', newTheme);
-        });
-    }
-});
-
-    </script>
+    <!-- Fin Script JS -->
 
 </body>
 </html>
