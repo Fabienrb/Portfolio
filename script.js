@@ -1,10 +1,3 @@
-// Script Menu Hamburger
-const menuHamburger = document.querySelector(".menu-hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-menuHamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile-menu');
-});
 
 // Gestion du thème sombre/clair
 const rootElement = document.documentElement;
