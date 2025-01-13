@@ -58,9 +58,12 @@ header {
 }
 
 .navbar .nav-links ul li {
-    margin: 0 25px;  
+    margin: 0 25px;
 }
 
+.navbar a {
+    font-size: 28px;
+}
 .navbar .nav-links ul li.active a {
     color: #857b7bb2;
     font-weight: 1000;
