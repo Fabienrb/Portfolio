@@ -714,6 +714,12 @@ footer {
 
 }
 
+.projet{
+    display:flex ;  
+    justify-content: center;  
+    margin-top: 5px;
+}
+
 /*Fin droit d'auteur */
 
 
