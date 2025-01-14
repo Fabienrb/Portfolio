@@ -715,3 +715,19 @@ footer {
 }
 
 /*Fin droit d'auteur */
+
+
+.card-container2:hover  {
+    transform: scale(1.025);     /* Agrandit légèrement au survol */
+    transition: 0.4s;
+}
+
+
+.card-container2 {
+    max-width: 400px;
+    margin: auto; /* Centre horizontalement */
+    display: flex;
+    justify-content: center; /* Centre le contenu s'il y a plusieurs éléments internes */
+    align-items: center;
+
+}
