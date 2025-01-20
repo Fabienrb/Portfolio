@@ -587,7 +587,7 @@ h1 {
 
 .profil p2 a {
     color: var(--ecriture2);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 
@@ -729,11 +729,31 @@ footer {
 }
 
 
-.card-container2 {
+.card-container2 .veille{
     max-width: 400px;
     margin: auto; /* Centre horizontalement */
     display: flex;
     justify-content: center; /* Centre le contenu s'il y a plusieurs éléments internes */
     align-items: center;
 
+}
+
+.card-container2 {
+    max-width: 75%;
+    margin: auto; /* Centre horizontalement */
+    display: flex;
+    justify-content: center; /* Centre le contenu s'il y a plusieurs éléments internes */
+    align-items: center;
+
+}
+
+.card-text2{
+    color: var(--ecriture);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
