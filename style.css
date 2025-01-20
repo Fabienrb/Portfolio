@@ -477,11 +477,15 @@ h1 {
     font-size: 30px;
 }
 
+
 .profil p2 a {
     color: var(--ecriture2);
     text-decoration: none;
 }
 
+.profil p2 a:hover{
+    text-decoration: underline;
+}
 
 /* Début contenu contact version téléphone */
 @media (max-width: 768px) {
