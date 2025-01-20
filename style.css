@@ -155,12 +155,14 @@ header {
     --ecriture: #262626; /* Couleur de texte clair */
     --background: #f1f1f1; /* Couleur de fond clair */
     --ecriture2: #494949; /* Couleur de texte secondaire clair */
+    --fond : #f1f1f1;
 }
 
 [data-theme="dark"] {
     --ecriture: #f1f1f1; /* Couleur de texte sombre */
     --background: #262626; /* Couleur de fond sombre */
     --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
+    --fond : #64648b;
 }
 
 body {
@@ -192,7 +194,7 @@ body {
     width: 50px; /* Taille carrée pour mieux gérer l'icône */
     height: 50px;
     border-radius: 50%; /* Donne une forme circulaire au bouton */
-    background-color: var(--ecriture1); /* Fond en fonction du thème */
+    background-color: var(--fond); /* Fond en fonction du thème */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Une légère ombre */
     cursor: pointer;
     z-index: 100; /* S'assurer qu'il est visible devant tout le reste */
@@ -205,7 +207,7 @@ body {
 
 .changeTheme:hover {
     transform: scale(1.1); /* Agrandit légèrement au survol */
-    background-color: var(--background); /* Change la couleur pour indiquer l'interaction */
+    transition: 0.4s;
 }
 
 /* Fin Position du changement de Thème */
@@ -598,6 +600,11 @@ h1 {
         margin: 10px;
         text-align: center;
         font-size: 1em; /* Taille du texte plus petite pour s'adapter */
+    }
+
+    .contact {
+        display: flex;
+        width: 10%;
     }
 
     .profil p1 {
