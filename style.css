@@ -1,10 +1,24 @@
 /*Début Général */
+:root {
+    --ecriture: #262626; /* Couleur de texte clair */
+    --background: #f1f1f1; /* Couleur de fond clair */
+    --ecriture2: #494949; /* Couleur de texte secondaire clair */
+    --fond : #f1f1f1;
+}
+
+[data-theme="dark"] {
+    --ecriture: #f1f1f1; /* Couleur de texte sombre */
+    --background: #262626; /* Couleur de fond sombre */
+    --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
+    --fond : #64648b62;
+}
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;   
     list-style: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,6 +27,8 @@ body {
     color: var(--ecriture);
     display: flex;
     flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
 }
 
 
@@ -138,44 +154,9 @@ header {
 
 /* Début Changement de Thème */
 
-.changeTheme {
-    position: absolute;
-    display : flex;
-    justify-content: right;
-    bottom: 10px;
-    right: 30px;
-    height: 45px;
-}
-.changeTheme img {
-    bottom: 10px;
-    border-radius: 15px;
-    z-index: 4;
-}
-
-:root {
-    --ecriture: #262626; /* Couleur de texte clair */
-    --background: #f1f1f1; /* Couleur de fond clair */
-    --ecriture2: #494949; /* Couleur de texte secondaire clair */
-    --fond : #f1f1f1;
-}
-
-[data-theme="dark"] {
-    --ecriture: #f1f1f1; /* Couleur de texte sombre */
-    --background: #262626; /* Couleur de fond sombre */
-    --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
-    --fond : #64648b62;
-}
-
-
-
 .navbar, .profil, .contenu, footer {
     color: var(--ecriture2);
 }
-
-.changeTheme img {
-    cursor: pointer;
-}
-
 
 /* Fin du Changement de Thème */
 
@@ -201,6 +182,8 @@ header {
 .changeTheme img {
     max-width: 70%; /* Ajuste la taille de l'image à l'intérieur du bouton */
     max-height: 70%;
+    cursor: pointer;
+
 }
 
 .changeTheme:hover {
@@ -229,83 +212,6 @@ header {
     font-size: 1.8em;
     right: 20px;
     
-}
-
-
-.profil {
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 2px;
-    justify-content: center;
-    display: flex;
-    margin: 60px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cadre p2 img {
-    height: 70px;
-    margin-top: 10px;
-}
-
-.cadre {
-    font-size: 25px;
-    border-radius: 10px;
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
-    padding: 1em;
-    place-content: center; 
-    margin: auto;
-    display: flex;
-}
-
-.cadre {
-    --color :hsla(0, 0%, 36%, 0.575);
-    display: inline-block;
-    cursor:pointer;
-    text-decoration: none;
-    border: 3px solid var(--color);
-    color: rgb(0, 0, 0);
-    padding: .5em 1em;
-    border-radius: .25em;
-    z-index: 1;
-
-    position: relative;
-    isolation: isolate;
-}
-
-
-.cadre::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: var(--color);
-    scale: 0 1;
-    transform-origin: right;
-    transition: scale 450ms;
-}
-
-
-.cadre:hover::after,
-.cadre:focus-visible::after {
-    transform-origin: left;
-    scale: 1 1;
-}
-
-.profil p1 {
-    color: var(--ecriture);
-    display: flex;
-
-}
-
-.profil p2 {
-    color: var(--ecriture2);
-    font-size: 30px;
-}
-
-.profil p2 a {
-    color: var(--ecriture2);
-    text-decoration: underline; 
 }
 
 /* Fin contenu acceuil */
@@ -351,20 +257,6 @@ header {
 /* Fin Version téléphone du tableau */
 
 /* Début contenu Projets */
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--background);
-    color: var(--ecriture);
-    font-style: normal;
-    font-weight: 400;
-}
 
 .card-btn a {
     color: var(--ecriture);
