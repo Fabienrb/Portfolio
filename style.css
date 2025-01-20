@@ -10,6 +10,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     background: var(--background);
+    color: var(--ecriture);
     display: flex;
     flex-direction: column;
 }
@@ -162,13 +163,10 @@ header {
     --ecriture: #f1f1f1; /* Couleur de texte sombre */
     --background: #262626; /* Couleur de fond sombre */
     --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
-    --fond : #64648b;
+    --fond : #64648b62;
 }
 
-body {
-    background-color: var(--background);
-    color: var(--ecriture);
-}
+
 
 .navbar, .profil, .contenu, footer {
     color: var(--ecriture2);
