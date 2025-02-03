@@ -381,7 +381,6 @@ h1 {
     }
 
     .profil .cadre {
-        white-space: nowrap;
         width: 90%; /* Prend presque toute la largeur */
         padding: 10px;
         border: 1px solid #ddd; /* Bordure pour délimiter */
