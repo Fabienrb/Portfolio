@@ -3,7 +3,7 @@
     --ecriture: #262626; /* Couleur de texte clair */
     --background: #f1f1f1; /* Couleur de fond clair */
     --ecriture2: #494949; /* Couleur de texte secondaire clair */
-    --fond : #f1f1f1;
+    --fond : #f1f1f175;
     --rempli : hsla(0, 2%, 76%, 0.497);
 }
 
@@ -179,6 +179,8 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Une légère ombre */
     cursor: pointer;
     z-index: 100; /* S'assurer qu'il est visible devant tout le reste */
+    transform: scale(1); /* Taille initiale */
+    transition: transform 0.4s ease-in-out; /* Animation fluide */
 }
 
 .changeTheme img {
@@ -260,8 +262,9 @@ header {
 
 /* Début contenu Projets */
 
-.card-btn a {
+.btn-link {
     color: var(--ecriture);
+    bottom: 10px;
 }
 
 .container {
