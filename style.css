@@ -4,6 +4,7 @@
     --background: #f1f1f1; /* Couleur de fond clair */
     --ecriture2: #494949; /* Couleur de texte secondaire clair */
     --fond : #f1f1f1;
+    --rempli : hsla(0, 2%, 76%, 0.497);
 }
 
 [data-theme="dark"] {
@@ -11,6 +12,7 @@
     --background: #262626; /* Couleur de fond sombre */
     --ecriture2: #64648b; /* Couleur de texte secondaire sombre */
     --fond : #64648b62;
+    --rempli : hsla(0, 0%, 37%, 0.36);
 }
 
 * {
@@ -399,12 +401,6 @@ h1 {
         margin-bottom: 10px;
     }
 
-    .profil a {
-        font-size: 1em;
-        color: #007BFF; /* Lien en bleu pour plus de visibilité */
-        text-decoration: none;
-    }
-
     .profil a:hover {
         text-decoration: underline;
     }
@@ -442,17 +438,24 @@ h1 {
 }
 
 .cadre {
-    --color: hsla(0, 0%, 36%, 0.575);
+    --color: var(--rempli);
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    border: 3px solid var(--color);
-    color: rgb(0, 0, 0);
+    border: 1.75px solid var(--color);
+    color: transparent;
     padding: .5em 1em;
     border-radius: .25em;
     z-index: 1;
     position: relative;
     isolation: isolate;
+    transform: scale(1); /* Taille initiale */
+    transition: transform 0.6s ease-in-out; /* Animation fluide */
+}
+
+.cadre:hover{
+    transform: scale(1.025);
+    transition: 0.75s;
 }
 
 .cadre::after {
@@ -462,13 +465,13 @@ h1 {
     inset: 0;
     background: var(--color);
     scale: 0 1;
-    transform-origin: right;
+    transform-origin: bottom;
     transition: scale 450ms;
 }
 
 .cadre:hover::after,
 .cadre:focus-visible::after {
-    transform-origin: left;
+    transform-origin: left,right;
     scale: 1 1;
 }
 
