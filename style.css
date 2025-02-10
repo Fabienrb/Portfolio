@@ -682,3 +682,31 @@ footer {
     font-size: 20px;
     padding-top: 30px;
 }
+
+.nav-links ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--ecriture); /* Ajuste la couleur du texte */
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--ecriture); /* Couleur du soulignement */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links ul li a:hover {
+    color: rgba(89, 108, 217, 0.757); /* Change la couleur du texte au survol */
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
