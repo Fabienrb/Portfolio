@@ -350,16 +350,12 @@ h1 {
 
 /*Début Version téléphone Projets */
 
-@media (min-width: 40rem){
-    .card-container{
-        width: 50%;
-    }
-}
 
 @media (min-width : 56rem){
     .card-container{
         width: 33.3333%;
     }
+    
 }
 
 
@@ -715,4 +711,9 @@ footer {
 .nav-links ul li a:hover::after {
     width: 100%;
     left: 0;
+}
+
+
+.card-container2 {
+    box-shadow: var(--ecriture);
 }
