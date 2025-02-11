@@ -731,6 +731,8 @@ footer {
     background-color: var(--background);
     color: var(--ecriture);
     text-decoration: none;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.339);
+    border: 1px solid var(--rempli);
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
@@ -758,7 +760,6 @@ footer {
 }
 
 
-
 .btn-profil:hover{
     transform: scale(1.05);
     transition: 0.75s;
@@ -775,14 +776,6 @@ footer {
     transition: scale 450ms;
 }
 
-/*
-.btn-profil:hover::after,
-.btn-profil:focus-visible::after {
-    transform-origin: left,right;
-    scale: 1 1;
-}
-
-*/
 
 .btn-profil {
     position: relative;
@@ -794,7 +787,6 @@ footer {
     height: 40px;
     opacity: 0; /* Légèrement transparent */
     transition: transform 0.3s ease-in-out;
-    z-index: 100000000;
 }
 
 .img-btn-profil:first-child {
