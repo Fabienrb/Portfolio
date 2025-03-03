@@ -846,11 +846,10 @@ footer {
     padding: 0;
 }
 
-.sousmenu li a {
+.sousmenu  li a {
     display: block;
     text-decoration: none;
-    color: var(--ecriture);
+    color: var(--ecriture) !important;
     padding: 10px;
     text-align: center;
 }
-
