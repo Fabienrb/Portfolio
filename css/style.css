@@ -846,10 +846,17 @@ footer {
     padding: 0;
 }
 
-.sousmenu  li a {
-    display: block;
-    text-decoration: none;
-    color: var(--ecriture) !important;
-    padding: 10px;
-    text-align: center;
+.card-container3:hover  {
+    transform: scale(1.025);     /* Agrandit légèrement au survol */
+    transition: 0.4s;
+}
+
+
+.card-container3 {
+    max-width: 50%;
+    margin: auto; /* Centre horizontalement */
+    display: flex;
+    justify-content: center; /* Centre le contenu s'il y a plusieurs éléments internes */
+    align-items: center;
+
 }
